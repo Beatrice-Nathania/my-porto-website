@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,500&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-
+ 
 :root{
   --bg: #EAF2FB;
   --bg-card: #F6FAFF;
@@ -22,7 +22,7 @@
   --white: #ffffff;
   --shadow: 0 18px 40px -22px rgba(38, 66, 105, 0.35);
 }
-
+ 
 :root:not([data-theme="light"]){
   @media (prefers-color-scheme: dark){
     --bg: #101823;
@@ -51,7 +51,7 @@
   --white: #101823;
   --shadow: 0 18px 40px -22px rgba(0,0,0,0.6);
 }
-
+ 
 *{ box-sizing: border-box; }
 html{ scroll-behavior: smooth; scroll-padding-top: env(safe-area-inset-top, 0px); }
 body{
@@ -68,18 +68,18 @@ body{
   html{ scroll-behavior: auto; }
   *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
 }
-
+ 
 .wrap{ max-width: 1080px; margin: 0 auto; padding: 0 28px; }
 img{ max-width: 100%; display:block; }
 [hidden]{ display:none !important; }
-
+ 
 a{ color: inherit; }
 a:focus-visible, button:focus-visible{
   outline: 2.5px solid var(--primary-deeper);
   outline-offset: 3px;
   border-radius: 6px;
 }
-
+ 
 .topbar{
   position: sticky; top:0; z-index: 40;
   background: color-mix(in srgb, var(--bg) 88%, transparent);
@@ -113,7 +113,7 @@ a:focus-visible, button:focus-visible{
   .topnav a{ padding: 10px 0 4px; border-bottom: 1px solid var(--line); }
   .nav-toggle{ display:block; }
 }
-
+ 
 .hero{ padding: 56px 0 40px; }
 .hero-grid{
   display:grid; grid-template-columns: 260px 1fr; gap: 48px; align-items: start;
@@ -121,7 +121,7 @@ a:focus-visible, button:focus-visible{
 @media (max-width: 820px){
   .hero-grid{ grid-template-columns: 1fr; }
 }
-
+ 
 .card-side{
   background: var(--bg-card);
   border: 1px solid var(--line);
@@ -131,7 +131,7 @@ a:focus-visible, button:focus-visible{
   position: sticky; top: calc(88px + env(safe-area-inset-top, 0px));
 }
 @media (max-width: 820px){ .card-side{ position: static; } }
-
+ 
 .avatar{
   width: 100%; aspect-ratio: 1/1; border-radius: 18px; overflow:hidden;
   background: linear-gradient(155deg, var(--primary) 0%, var(--primary-deep) 100%);
@@ -142,11 +142,11 @@ a:focus-visible, button:focus-visible{
 .avatar .initials{
   font-family:'Newsreader', serif; font-size: 3.2rem; color: var(--white); font-weight:500;
 }
-
+ 
 .side-name{ font-size: 1.4rem; margin: 0 0 2px; font-weight: 600; }
 .side-major{ color: var(--primary-deeper); font-weight: 600; font-size: .95rem; margin: 0 0 14px; }
 .side-loc{ color: var(--ink-soft); font-size: .88rem; margin: 0 0 18px; }
-
+ 
 .side-links{ display:flex; flex-direction: column; gap: 9px; }
 .side-links a{
   display:flex; align-items:center; gap:9px;
@@ -158,17 +158,17 @@ a:focus-visible, button:focus-visible{
 .side-links .dot{
   width: 7px; height:7px; border-radius:50%; background: var(--primary-deep); flex:0 0 auto;
 }
-
+ 
 .headline{
   font-family:'Newsreader', serif; font-weight: 500;
   font-size: clamp(1.7rem, 4vw, 2.9rem); line-height: 1.16; margin: 0 0 18px; max-width: 26ch;
 }
 .headline .plain{ color: var(--primary-deeper); }
-
+ 
 .intro-text{ color: var(--ink-soft); font-size: 1.02rem; max-width: 62ch; }
 .intro-text p{ margin: 0 0 14px; }
 .intro-text p:last-child{ margin-bottom: 28px; }
-
+ 
 .cta-row{ display:flex; flex-wrap: wrap; gap: 14px; margin-bottom: 44px; }
 .btn{
   display:inline-flex; align-items:center; gap: 9px;
@@ -187,11 +187,11 @@ a:focus-visible, button:focus-visible{
 }
 .btn-outline:hover{ background: var(--bg-card-alt); }
 .btn svg{ width:17px; height:17px; flex:0 0 auto; }
-
+ 
 .section-title{ font-size: 1.45rem; font-weight: 600; margin: 0 0 6px; }
 .section-sub{ color: var(--ink-soft); font-size: .95rem; margin: 0 0 22px; }
 .block{ margin-bottom: 56px; }
-
+ 
 .edu-list{ display:grid; gap: 14px; }
 .edu-card{
   background: var(--bg-card); border: 1px solid var(--line); border-radius: 18px;
@@ -210,7 +210,7 @@ a:focus-visible, button:focus-visible{
 .edu-school{ color: var(--primary-deeper); font-weight: 500; font-size: .9rem; margin: 2px 0 4px; }
 .edu-period{ color: var(--ink-soft); font-size: .82rem; margin: 0 0 8px; }
 .edu-desc{ color: var(--ink-soft); font-size: .92rem; margin: 0; max-width: 62ch; }
-
+ 
 .skills-panel{
   background: var(--bg-card); border:1px solid var(--line); border-radius: 20px;
   padding: 26px 28px; box-shadow: var(--shadow);
@@ -220,7 +220,7 @@ a:focus-visible, button:focus-visible{
   color: var(--ink-soft); margin: 22px 0 12px;
 }
 .skills-subtitle:first-of-type{ margin-top: 4px; }
-
+ 
 .skillcard-grid{ display:flex; flex-wrap: wrap; gap: 12px; }
 .skill-card{
   display:flex; align-items:center; gap: 10px;
@@ -232,14 +232,15 @@ a:focus-visible, button:focus-visible{
   display:flex; align-items:center; justify-content:center;
 }
 .skill-card .skill-icon svg{ width: 100%; height: 100%; }
+.skill-card .skill-icon img{ width: 100%; height: 100%; object-fit: cover; }
 .skill-card .skill-name{ font-size: .9rem; font-weight: 600; }
-
+ 
 .skills-chips{ display:flex; flex-wrap:wrap; gap: 10px; }
 .chip{
   font-size: .86rem; font-weight: 500; padding: 8px 14px; border-radius: 999px;
   background: var(--bg-card-alt); border: 1px solid var(--line); color: var(--ink);
 }
-
+ 
 .cert-list{ list-style:none; margin:0; padding:0; display:grid; gap: 10px; }
 .cert-list li{
   display:flex; align-items:center; justify-content:space-between; gap: 14px;
@@ -253,9 +254,9 @@ a:focus-visible, button:focus-visible{
   white-space: nowrap;
 }
 .cert-link:hover{ text-decoration: underline; }
-
+ 
 .viewall-wrap{ display:flex; justify-content:center; margin-top: 30px; }
-
+ 
 .tabs-section{ margin-bottom: 60px; }
 .tab-buttons{ display:flex; gap: 6px; border-bottom: 1px solid var(--line); margin-bottom: 30px; }
 .tab-btn{
@@ -265,10 +266,10 @@ a:focus-visible, button:focus-visible{
 }
 .tab-btn:hover{ color: var(--ink); }
 .tab-btn.active{ color: var(--primary-deeper); border-color: var(--primary-deep); }
-
+ 
 .tab-panel{ display:none; }
 .tab-panel.active{ display:block; }
-
+ 
 .timeline{ position:relative; padding-left: 28px; }
 .timeline::before{
   content:''; position:absolute; left: 6px; top: 6px; bottom: 6px; width: 2px; background: var(--line);
@@ -281,7 +282,7 @@ a:focus-visible, button:focus-visible{
 }
 .ti-head{ display:flex; align-items:center; gap: 12px; margin-bottom: 8px; }
 .ti-logo{
-  width: 64px; height: 64px; border-radius: 10px; flex: 0 0 auto; overflow: hidden;
+  width: 150px; height: 150px; border-radius: 10px; flex: 0 0 auto; overflow: hidden;
   background: var(--bg-card-alt); border: 1px solid var(--line);
   display:flex; align-items:center; justify-content:center; color: var(--primary-deeper);
 }
@@ -292,7 +293,7 @@ a:focus-visible, button:focus-visible{
 .ti-org{ color: var(--primary-deeper); font-weight: 500; font-size: .9rem; margin: 2px 0 0; }
 .ti-period{ color: var(--ink-soft); font-size: .82rem; margin: 2px 0 0; }
 .ti-desc{ color: var(--ink-soft); font-size: .93rem; max-width: 62ch; margin:0; }
-
+ 
 .porto-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
 .porto-card{
   background: var(--bg-card); border: 1px solid var(--line); border-radius: 18px;
@@ -320,7 +321,7 @@ a:focus-visible, button:focus-visible{
 }
 .porto-gh:hover{ color: var(--primary-deeper); }
 .porto-gh svg{ width:16px; height:16px; }
-
+ 
 footer{
   border-top: 1px solid var(--line); padding: 30px 0 40px;
   color: var(--ink-soft); font-size: .85rem;
@@ -337,7 +338,7 @@ footer a:hover{ color: var(--primary-deeper); }
 }
 .footer-social svg{ width: 19px; height: 19px; }
 .footer-social:hover{ transform: translateY(-2px); background: var(--primary-deep); color: var(--white); }
-
+ 
 .subpage{ padding: 44px 0 20px; }
 .subpage-back{
   display:inline-flex; align-items:center; gap: 8px;
@@ -347,11 +348,11 @@ footer a:hover{ color: var(--primary-deeper); }
 .subpage-back svg{ width: 17px; height:17px; }
 .subpage-back:hover{ text-decoration: underline; }
 .subpage-header{ margin-bottom: 34px; }
-
+ 
 </style>
 </head>
 <body>
-
+ 
 <div class="topbar">
   <div class="wrap topbar-inner">
     <span class="brand" id="navBrand">Nama Kamu</span>
@@ -365,12 +366,12 @@ footer a:hover{ color: var(--primary-deeper); }
     <button class="nav-toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">☰</button>
   </div>
 </div>
-
+ 
 <main class="wrap" id="viewHome">
-
+ 
   <section class="hero" id="about">
     <div class="hero-grid">
-
+ 
       <aside class="card-side">
         <div class="avatar" id="avatarBox">
           <span class="initials" id="avatarInitials">NK</span>
@@ -380,7 +381,7 @@ footer a:hover{ color: var(--primary-deeper); }
         <p class="side-loc" id="sideLoc">Kota, Indonesia</p>
         <div class="side-links" id="sideLinks"></div>
       </aside>
-
+ 
       <div class="intro-col">
         <h2 class="headline"><span class="plain">I am</span> <span id="headlineName">Nama Kamu</span></h2>
         <div class="intro-text" id="introText"></div>
@@ -395,27 +396,27 @@ footer a:hover{ color: var(--primary-deeper); }
           </a>
         </div>
       </div>
-
+ 
     </div>
   </section>
-
+ 
   <section class="block" id="edu">
     <h3 class="section-title">Education</h3>
     <div class="edu-list" id="eduList"></div>
   </section>
-
+ 
   <section class="block skills-panel" id="skills">
     <h3 class="section-title">Certificate &amp; Skill</h3>
     
     <h4 class="skills-subtitle">Hard Skills</h4>
     <div class="skillcard-grid" id="hardSkills"></div>
-
+ 
     <h4 class="skills-subtitle">Soft Skills</h4>
     <div class="skills-chips" id="softSkills"></div>
-
+ 
     <h4 class="skills-subtitle">Certificates</h4>
     <ul class="cert-list" id="certList"></ul>
-
+ 
     <div class="viewall-wrap">
       <a class="btn btn-outline" href="#/skills">
         View All Certificates &amp; Skills
@@ -423,15 +424,15 @@ footer a:hover{ color: var(--primary-deeper); }
       </a>
     </div>
   </section>
-
+ 
   <section class="tabs-section" id="pengalaman-porto">
     <h3 class="section-title">Experience &amp; Portofolio</h3>
-
+ 
     <div class="tab-buttons" role="tablist">
       <button class="tab-btn active" id="tabBtnExp" role="tab" aria-selected="true" aria-controls="panelExp">Experience</button>
       <button class="tab-btn" id="tabBtnPorto" role="tab" aria-selected="false" aria-controls="panelPorto">Portofolio</button>
     </div>
-
+ 
     <div class="tab-panel active" id="panelExp" role="tabpanel">
       <div class="timeline" id="expTimeline"></div>
       <div class="viewall-wrap">
@@ -441,7 +442,7 @@ footer a:hover{ color: var(--primary-deeper); }
         </a>
       </div>
     </div>
-
+ 
     <div class="tab-panel" id="panelPorto" role="tabpanel">
       <div class="porto-grid" id="portoGrid"></div>
       <div class="viewall-wrap">
@@ -452,9 +453,9 @@ footer a:hover{ color: var(--primary-deeper); }
       </div>
     </div>
   </section>
-
+ 
 </main>
-
+ 
 <main class="wrap subpage" id="viewAllPorto" hidden>
   <a class="subpage-back" href="#about">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5m0 0l6-6m-6 6l6 6"/></svg>
@@ -465,7 +466,7 @@ footer a:hover{ color: var(--primary-deeper); }
   </div>
   <div class="porto-grid" id="portoGridAll"></div>
 </main>
-
+ 
 <main class="wrap subpage" id="viewAllExp" hidden>
   <a class="subpage-back" href="#about">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5m0 0l6-6m-6 6l6 6"/></svg>
@@ -476,7 +477,7 @@ footer a:hover{ color: var(--primary-deeper); }
   </div>
   <div class="timeline" id="expTimelineAll"></div>
 </main>
-
+ 
 <main class="wrap subpage" id="viewAllSkills" hidden>
   <a class="subpage-back" href="#about">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5m0 0l6-6m-6 6l6 6"/></svg>
@@ -485,17 +486,17 @@ footer a:hover{ color: var(--primary-deeper); }
   <div class="subpage-header">
     <h3 class="section-title">Betris Certificates &amp; Skills</h3>
   </div>
-
+ 
   <h4 class="skills-subtitle" style="margin-top:0">Hard Skills</h4>
   <div class="skillcard-grid" id="hardSkillsAll"></div>
-
+ 
   <h4 class="skills-subtitle">Soft Skills</h4>
   <div class="skills-chips" id="softSkillsAll"></div>
-
+ 
   <h4 class="skills-subtitle">Certificates</h4>
   <ul class="cert-list" id="certListAll"></ul>
 </main>
-
+ 
 <footer>
   <span id="footerName">© <span id="footerYear"></span> Nama Kamu</span>
   <div class="footer-socials">
@@ -510,9 +511,9 @@ footer a:hover{ color: var(--primary-deeper); }
     </a>
   </div>
 </footer>
-
+ 
 <script>
-
+ 
 const CONFIG = {
   name: "Beatrice Nathania",
   initials: "BN",
@@ -533,20 +534,24 @@ const CONFIG = {
     { label: "LinkedIn", href: "https://www.linkedin.com/in/beatrice-nathania-0367b6325/" },
     { label: "GitHub", href: "https://github.com/Beatrice-Nathania" }
   ],
-
+ 
   education: [
     { degree: "S1 Data Science", school: "Bina Nusantara University", period: "Aug 2024 - Present", desc: "Focus on data analysis, machine learning, and deep learning", logo: "images/binus-university-logo.png" }
   ],
-
+ 
   orgLogos: {
     "Bina Nusantara": "images/binus-university-logo.png",
     "Data Science Club": "images/data-science-club.jpg",
     "Workshop DSC X Ureeka": "images/workshop-dsc-x-ureeka.jpg",
     "Beth Bootcamp": "images/beth-bootcamp.png"
   },
-
+ 
   hardSkills: [
     { name: "Python", icon: "python" },
+    { name: "PySpark", image: "images/pyspark.png"},
+    { name: "TensorFlow", image: "images/tensorflow.png"},
+    { name: "JavaScript", image: "images/javascript.png"},
+    { name: "R", image: "images/Rlang.jpg"},
     { name: "SQL", icon: "sql" },
     { name: "HTML", icon: "html" },
     { name: "CSS", icon: "css" },
@@ -555,13 +560,13 @@ const CONFIG = {
     { name: "Microsoft Excel", icon: "excel" }
   ],
   softSkills: ["Public Speaking", "Team Work", "Collaboration"],
-
+ 
   certificates: [
     { name: "Bootcamp Data Analyst", issuer: "KarirNex", url: "https://karirnex.com/c/CaFRXmE" },
     { name: "Certificate of Large Language Model", issuer: "NVIDIA", url: "https://drive.google.com/file/d/1uE4y83vvXlSLaYpqnkFbV8pY3jED-TM-/view?usp=drive_link" },
     { name: "Certificate of AWS Machine Learning Foundation", issuer: "Amazon Web Services (AWS)", url: "https://drive.google.com/file/d/1tVtPjFqz0bxk9WokWsBbrcXIwPioW5tn/view?usp=drive_link" }
   ],
-
+ 
   experience: [
     { role: "Bootcamp Instructor", org: "Beth Bootcamp", period: "Aug 2025", desc: "Guided 15 students in mastering C programming fundamentals through 12 hands-on coding sessions, achieving a 100% project completion rate through regular code reviews and debugging support." },
     { role: "Education and Development", org: "Data Science Club", period: "Jan 2025 — Present", desc: "Designed structured training modules and learning roadmaps for 100+ Data Science Club members, coordinating class schedules with event and technical teams. Facilitated and mentored 50+ students on technical concepts through engaging public speaking sessions." },
@@ -570,7 +575,7 @@ const CONFIG = {
     { role: "PIC Event", org: "Workshop DSC X Ureeka", period: "Apr 2026 — Mei 2026", desc: "Directed event operations for a workshop attended by 40+ students, leading a core team of 3 and delegating tasks across 5 specialized event teams to ensure seamless execution." },
     { role: "Event Designer - Outventure", org: "Data Science Club", period: "Juli 2025", desc: "Assisted in end-to-end event planning — from ideation, budgeting, and timeline creation to post-event evaluation — while designing master schedules and site layout plans." }
   ],
-
+ 
   portfolio: [
     {
     tag: "Amazon Web Application",
@@ -610,7 +615,7 @@ const CONFIG = {
     }
   ]
 };
-
+ 
 const ICONS = {
   python: `<svg viewBox="0 0 32 32"><path fill="#3776AB" d="M15.9 2c-1.9 0-3.5.2-4.9.5C8.7 3 8 4 8 5.7v3.1h8v1H5.6C3.5 9.8 2 11.7 2 15c0 3.3 1.3 5.4 3.7 6.1.8.2 1.6.3 2.3.3h1.5v-3c0-2.6 2.3-4.9 5-4.9h6c2.3 0 4.1-1.9 4.1-4.2V5.7c0-1.7-1.4-2.9-3-3.2C20.1 2.2 17.9 2 15.9 2zm-3.3 3c.7 0 1.2.5 1.2 1.2s-.5 1.2-1.2 1.2-1.2-.5-1.2-1.2S11.9 5 12.6 5z"/><path fill="#FFD43B" d="M16.1 30c1.9 0 3.5-.2 4.9-.5 2.3-.5 3-1.5 3-3.2v-3.1h-8v-1h10.4c2.1 0 3.6-1.9 3.6-5.2 0-3.3-1.3-5.4-3.7-6.1-.8-.2-1.6-.3-2.3-.3h-1.5v3c0 2.6-2.3 4.9-5 4.9h-6c-2.3 0-4.1 1.9-4.1 4.2v5.1c0 1.7 1.4 2.9 3 3.2 1.5.4 3.7.6 5.7.6zm3.3-3c-.7 0-1.2-.5-1.2-1.2s.5-1.2 1.2-1.2 1.2.5 1.2 1.2-.5 1.2-1.2 1.2z"/></svg>`,
   html: `<svg viewBox="0 0 32 32"><path fill="#E44D26" d="M4 2l2.5 27L16 31.5 25.5 29 28 2H4z"/><path fill="#F16529" d="M16 4.5v24.7l7.7-2.1L25.6 4.5H16z"/><path fill="#EBEBEB" d="M16 13.5H10.9l.3 3.5H16v3.4h-6.9l.7 8 6.2 1.7v-3.6l-3.4-.9-.2-2.5h3.6v-3.4H9.5l-.9-9.6H16v3.4z"/><path fill="#fff" d="M16 13.5v3.4h4.8l-.4 4.4-4.4 1.2v3.6l6.2-1.7.9-9.9H16zm0-3.9v3.4h7.4l.3-3.4H16z"/></svg>`,
@@ -622,34 +627,34 @@ const ICONS = {
   excel: `<svg viewBox="0 0 32 32"><path fill="#1D6F42" d="M4 2h16l8 8v20H4z"/><path fill="#2E7D46" d="M20 2l8 8h-8z"/><path fill="#fff" d="M10 14h3.5l2.5 3.6 2.5-3.6H22l-4 6 4 6h-3.5l-2.5-3.6-2.5 3.6H10l4-6z"/></svg>`,
   default: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 4L2 12l6 8M16 4l6 8-6 8"/></svg>`
 };
-
+ 
 function el(tag, cls, html){
   const e = document.createElement(tag);
   if(cls) e.className = cls;
   if(html !== undefined) e.innerHTML = html;
   return e;
 }
-
+ 
 document.getElementById('navBrand').textContent = CONFIG.name;
 document.getElementById('sideName').textContent = CONFIG.name;
 document.getElementById('sideMajor').textContent = CONFIG.major;
 document.getElementById('sideLoc').textContent = CONFIG.location;
 document.getElementById('headlineName').textContent = CONFIG.name;
-
+ 
 const introBox = document.getElementById('introText');
 CONFIG.intro.forEach(paragraph => introBox.appendChild(el('p', '', paragraph)));
-
+ 
 document.getElementById('footerYear').textContent = new Date().getFullYear();
 document.getElementById('avatarInitials').textContent = CONFIG.initials;
-
+ 
 const cvBtn = document.getElementById('cvBtn');
 cvBtn.href = CONFIG.cvFile;
 cvBtn.setAttribute('download', '');
-
+ 
 document.getElementById('footerLinkedin').href = CONFIG.linkedinUrl;
 document.getElementById('footerEmail').href = CONFIG.emailUrl;
 document.getElementById('footerGithub').href = CONFIG.githubUrl;
-
+ 
 if(CONFIG.photoUrl){
   const box = document.getElementById('avatarBox');
   box.innerHTML = '';
@@ -658,7 +663,7 @@ if(CONFIG.photoUrl){
   img.alt = CONFIG.name;
   box.appendChild(img);
 }
-
+ 
 const sideLinks = document.getElementById('sideLinks');
 CONFIG.links.forEach(l => {
   const a = el('a', '', `<span class="dot"></span><span>${l.label}</span>`);
@@ -667,7 +672,7 @@ CONFIG.links.forEach(l => {
   a.rel = "noopener";
   sideLinks.appendChild(a);
 });
-
+ 
 const eduList = document.getElementById('eduList');
 const eduIconDefault = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/></svg>`;
 CONFIG.education.forEach(x => {
@@ -683,9 +688,9 @@ CONFIG.education.forEach(x => {
     </div>
   `));
 });
-
+ 
 function buildSkillCard(s){
-  const icon = ICONS[s.icon] || ICONS.default;
+  const icon = s.image ? `<img src="${s.image}" alt="${s.name}">` : (ICONS[s.icon] || ICONS.default);
   return el('div', 'skill-card', `<span class="skill-icon">${icon}</span><span class="skill-name">${s.name}</span>`);
 }
 function renderSkills(hardBoxId, softBoxId){
@@ -696,7 +701,7 @@ function renderSkills(hardBoxId, softBoxId){
 }
 renderSkills('hardSkills', 'softSkills');
 renderSkills('hardSkillsAll', 'softSkillsAll');
-
+ 
 function buildCertItem(c){
   const li = el('li', '', `
     <div>
@@ -704,7 +709,7 @@ function buildCertItem(c){
       <span class="cert-issuer">${c.issuer}</span>
     </div>
   `);
-  const a = el('a', 'cert-link', 'Lihat sertifikat');
+  const a = el('a', 'cert-link', 'View certificate');
   a.href = c.url;
   a.target = "_blank";
   a.rel = "noopener";
@@ -715,7 +720,7 @@ const certList = document.getElementById('certList');
 const certListAll = document.getElementById('certListAll');
 CONFIG.certificates.slice(0, 2).forEach(c => certList.appendChild(buildCertItem(c)));
 CONFIG.certificates.forEach(c => certListAll.appendChild(buildCertItem(c)));
-
+ 
 const orgIconDefault = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"/></svg>`;
 function buildExpItem(x){
   const logoSrc = CONFIG.orgLogos[x.org];
@@ -737,12 +742,12 @@ const expTimeline = document.getElementById('expTimeline');
 const expTimelineAll = document.getElementById('expTimelineAll');
 CONFIG.experience.slice(0, 3).forEach(x => expTimeline.appendChild(buildExpItem(x)));
 CONFIG.experience.forEach(x => expTimelineAll.appendChild(buildExpItem(x)));
-
+ 
 const ghIcon = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.1 3.29 9.4 7.86 10.94.58.1.79-.25.79-.56v-2.17c-3.2.7-3.88-1.36-3.88-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18a10.9 10.9 0 015.73 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.58.23 2.75.11 3.04.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A10.51 10.51 0 0023.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>';
-
+ 
 function buildPortoCard(p){
   const card = el('div', 'porto-card');
-
+ 
   const media = el('div', 'porto-media');
   if(p.imageUrl){
     const img = document.createElement('img');
@@ -753,7 +758,7 @@ function buildPortoCard(p){
     media.appendChild(el('span', 'porto-media-fallback', p.title));
   }
   card.appendChild(media);
-
+ 
   const body = el('div', 'porto-body', `
     <span class="porto-tag">${p.tag}</span>
     <h4 class="porto-title">${p.title}</h4>
@@ -765,14 +770,14 @@ function buildPortoCard(p){
   a.rel = "noopener";
   body.appendChild(a);
   card.appendChild(body);
-
+ 
   return card;
 }
 const portoGrid = document.getElementById('portoGrid');
 CONFIG.portfolio.slice(0, 3).forEach(p => portoGrid.appendChild(buildPortoCard(p)));
 const portoGridAll = document.getElementById('portoGridAll');
 CONFIG.portfolio.forEach(p => portoGridAll.appendChild(buildPortoCard(p)));
-
+ 
 const ROUTES = {
   '#/portofolio': 'viewAllPorto',
   '#/experience': 'viewAllExp',
@@ -785,16 +790,19 @@ function renderRoute(){
   ALL_VIEWS.forEach(id => { document.getElementById(id).hidden = (id !== activeId); });
   if(matchKey){
     window.scrollTo(0, 0);
+  } else if(location.hash){
+    const target = document.querySelector(location.hash);
+    if(target) target.scrollIntoView();
   }
 }
 window.addEventListener('hashchange', renderRoute);
 renderRoute();
-
+ 
 const tabBtnExp = document.getElementById('tabBtnExp');
 const tabBtnPorto = document.getElementById('tabBtnPorto');
 const panelExp = document.getElementById('panelExp');
 const panelPorto = document.getElementById('panelPorto');
-
+ 
 function showTab(which){
   const expActive = which === 'exp';
   tabBtnExp.classList.toggle('active', expActive);
@@ -806,7 +814,7 @@ function showTab(which){
 }
 tabBtnExp.addEventListener('click', () => showTab('exp'));
 tabBtnPorto.addEventListener('click', () => showTab('porto'));
-
+ 
 const navToggle = document.getElementById('navToggle');
 const topNav = document.getElementById('topNav');
 navToggle.addEventListener('click', () => {
@@ -818,6 +826,6 @@ topNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
   navToggle.setAttribute('aria-expanded', false);
 }));
 </script>
-
+ 
 </body>
 </html>
