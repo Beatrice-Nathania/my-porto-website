@@ -358,9 +358,9 @@ footer a:hover{ color: var(--primary-deeper); }
     <ul class="topnav" id="topNav">
       <li><a href="#tentang">About me</a></li>
       <li><a href="#pendidikan">Education</a></li>
-      <li><a href="#skills">Certificate &amp; Skill</a></li>
-      <li><a href="#pengalaman-porto">Experience</a></li>
-      <li><a href="#pengalaman-porto">Portofolio</a></li>
+      <li><a href="#/skills">Certificate &amp; Skill</a></li>
+      <li><a href="#/experience">Experience</a></li>
+      <li><a href="#/portofolio">Portofolio</a></li>
     </ul>
     <button class="nav-toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">☰</button>
   </div>
@@ -783,7 +783,9 @@ function renderRoute(){
   const matchKey = Object.keys(ROUTES).find(r => location.hash.startsWith(r));
   const activeId = matchKey ? ROUTES[matchKey] : 'viewHome';
   ALL_VIEWS.forEach(id => { document.getElementById(id).hidden = (id !== activeId); });
-  window.scrollTo(0, 0);
+  if(matchKey){
+    window.scrollTo(0, 0);
+  }
 }
 window.addEventListener('hashchange', renderRoute);
 renderRoute();
