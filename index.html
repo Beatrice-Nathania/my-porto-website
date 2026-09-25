@@ -125,7 +125,7 @@ a:focus-visible, button:focus-visible{
 .card-side{
   background: var(--bg-card);
   border: 1px solid var(--line);
-  border-radius: 22px;
+  border-radius: 2px;
   padding: 26px;
   box-shadow: var(--shadow);
   position: sticky; top: calc(88px + env(safe-area-inset-top, 0px));
@@ -536,7 +536,7 @@ const CONFIG = {
   ],
  
   education: [
-    { degree: "S1 Data Science", school: "Bina Nusantara University", period: "Aug 2024 - Present", desc: "Focus on data analysis, machine learning, and deep learning", logo: "images/binus-university-logo.png" }
+    { degree: "Undergraduate Data Science", school: "Bina Nusantara University", period: "Aug 2024 - Present", desc: "Focus on data analysis, machine learning, and deep learning", logo: "images/binus-university-logo.png" }
   ],
  
   orgLogos: {
@@ -563,8 +563,9 @@ const CONFIG = {
  
   certificates: [
     { name: "Bootcamp Data Analyst", issuer: "KarirNex", url: "https://karirnex.com/c/CaFRXmE" },
-    { name: "Certificate of Large Language Model", issuer: "NVIDIA", url: "https://drive.google.com/file/d/1uE4y83vvXlSLaYpqnkFbV8pY3jED-TM-/view?usp=drive_link" },
-    { name: "Certificate of AWS Machine Learning Foundation", issuer: "Amazon Web Services (AWS)", url: "https://drive.google.com/file/d/1tVtPjFqz0bxk9WokWsBbrcXIwPioW5tn/view?usp=drive_link" }
+    { name: "Large Language Model", issuer: "NVIDIA", url: "https://drive.google.com/file/d/1uE4y83vvXlSLaYpqnkFbV8pY3jED-TM-/view?usp=drive_link" },
+    { name: "Fundamental of DeepLeaning", issuer: "NVIDIA", url: "https://drive.google.com/file/d/1AySJH3q0DwgNjVyRQh6iBujrh_lDOuK_/view?usp=drive_link" },
+    { name: "AWS Machine Learning Foundation", issuer: "Amazon Web Services (AWS)", url: "https://drive.google.com/file/d/1tVtPjFqz0bxk9WokWsBbrcXIwPioW5tn/view?usp=drive_link" }
   ],
  
   experience: [
@@ -586,12 +587,20 @@ const CONFIG = {
     },
     { tag: "Web App", title: "Student Salary and Placement Prediction Web Application", desc: "Built and deployed an interactive Streamlit web app with a full data pipeline for a 5,000-student dataset, using Random Forest and Logistic Regression models to predict salary and placement status alongside dynamic data visualizations.", githubUrl: "https://github.com/Beatrice-Nathania/Salary_and_Placement_Prediction_App", imageUrl: "images/application.jpg" },
     {
+    tag: "Database SQL",
+    title: "Tourism Database",
+    desc: "Designed and built a normalized tourism database using SQL, structuring raw tourism data into multiple relational tables with defined primary and foreign keys to ensure data integrity and support efficient querying.",
+    githubUrl: "https://github.com/Beatrice-Nathania/tourism-database",
+    imageUrl: "images/sql.png"
+    },
+    {
     tag: "Data Visualization",
     title: "Heart Disease Risk Factor Analysis",
     desc: "Built an interactive Shiny web app in R to analyze heart disease risk factors, allowing users to filter the data and easily identify underlying patterns.",
     githubUrl: "https://github.com/Beatrice-Nathania/does-cholesterol-cause-heartdisease",
     imageUrl: "images/project-visualization.jpg"
     },
+    
     {
     tag: "Deep Learning",
     title: "Stock Prediction Using LSTM",
@@ -793,7 +802,7 @@ function renderRoute(){
   } else if(location.hash){
     const target = document.querySelector(location.hash);
     if(target) target.scrollIntoView();
-  }
+  } 
 }
 window.addEventListener('hashchange', renderRoute);
 renderRoute();
