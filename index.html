@@ -410,6 +410,9 @@ footer a:hover{ color: var(--primary-deeper); }
     
     <h4 class="skills-subtitle">Skills</h4>
     <div class="skillcard-grid" id="hardSkills"></div>
+
+    <h4 class="skills-subtitle">Library</h4>
+    <div class="skillcard-grid" id="library"></div>
  
     <h4 class="skills-subtitle">Technical Skills</h4>
     <div class="skills-chips" id="softSkills"></div>
@@ -492,6 +495,9 @@ footer a:hover{ color: var(--primary-deeper); }
  
   <h4 class="skills-subtitle">Technical Skills</h4>
   <div class="skills-chips" id="softSkillsAll"></div>
+
+  <h4 class="skills-subtitle">Library</h4>
+  <div class="skills-chips" id="libraryAll"></div>
  
   <h4 class="skills-subtitle">Certificates</h4>
   <ul class="cert-list" id="certListAll"></ul>
@@ -548,8 +554,6 @@ const CONFIG = {
  
   hardSkills: [
     { name: "Python", icon: "python" },
-    { name: "PySpark", image: "images/pyspark.png"},
-    { name: "TensorFlow", image: "images/tensorflow.png"},
     { name: "JavaScript", image: "images/javascript.png"},
     { name: "R", image: "images/Rlang.jpg"},
     { name: "SQL", icon: "sql" },
@@ -558,6 +562,11 @@ const CONFIG = {
     { name: "C Language", icon: "c" },
     { name: "Figma", icon: "figma" },
     { name: "Microsoft Excel", icon: "excel" }
+  ],
+  libraries: [
+    { name: "PySpark", image: "images/pyspark.png"},
+    { name: "TensorFlow", image: "images/tensorflow.png"},
+    { name: "Scikit-Learn", image: "images/scikit learn.png"}
   ],
   softSkills: ["Machine Learning", "Deep Learning", "Data Visualization", "Model Deployment", "Data Analysis"],
  
@@ -702,14 +711,16 @@ function buildSkillCard(s){
   const icon = s.image ? `<img src="${s.image}" alt="${s.name}">` : (ICONS[s.icon] || ICONS.default);
   return el('div', 'skill-card', `<span class="skill-icon">${icon}</span><span class="skill-name">${s.name}</span>`);
 }
-function renderSkills(hardBoxId, softBoxId){
+function renderSkills(hardBoxId, softBoxId, libId){
   const hardBox = document.getElementById(hardBoxId);
   CONFIG.hardSkills.forEach(s => hardBox.appendChild(buildSkillCard(s)));
+  const lib = document.getElementById(libId)
+  CONFIG.libraries.forEach(s => lib.appendChild(buildSkillCard(s)));
   const softBox = document.getElementById(softBoxId);
   CONFIG.softSkills.forEach(s => softBox.appendChild(el('span', 'chip', s)));
 }
-renderSkills('hardSkills', 'softSkills');
-renderSkills('hardSkillsAll', 'softSkillsAll');
+renderSkills('hardSkills', 'softSkills', 'library');
+renderSkills('hardSkillsAll', 'softSkillsAll', 'libraryAll');
  
 function buildCertItem(c){
   const li = el('li', '', `
