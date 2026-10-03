@@ -153,7 +153,7 @@ a:focus-visible, button:focus-visible{
 
 .hero{ padding: 56px 0 40px; }
 .hero-grid{
-  display:grid; grid-template-columns: 260px 1fr; gap: 48px; align-items: start;
+  display:grid; grid-template-columns: 300px 1fr; gap: 48px; align-items: start;
 }
 @media (max-width: 820px){
   .hero-grid{ grid-template-columns: 1fr; }
@@ -248,6 +248,25 @@ a:focus-visible, button:focus-visible{
 .edu-period{ color: var(--ink-soft); font-size: .82rem; margin: 0 0 8px; }
 .edu-desc{ color: var(--ink-soft); font-size: .92rem; margin: 0; max-width: 62ch; }
 
+.award-list{ display:grid; gap: 14px; }
+.award-card{
+  background: var(--bg-card); border: 1px solid var(--line); border-radius: 18px;
+  padding: 20px 22px; box-shadow: var(--shadow);
+  display:grid; grid-template-columns: auto 1fr; gap: 16px; align-items:flex-start;
+}
+.award-icon{
+  width: 52px; height: 52px; border-radius: 12px; flex: 0 0 auto; overflow: hidden;
+  background: linear-gradient(155deg, var(--primary) 0%, var(--primary-deep) 100%);
+  display:flex; align-items:center; justify-content:center; color: var(--white);
+}
+.award-icon.has-logo{ background: #fff; border: 1px solid var(--line); }
+.award-icon img{ width: 100%; height: 100%; object-fit: contain; padding: 6px; }
+.award-icon svg{ width: 24px; height: 24px; }
+.award-title{ font-weight: 600; font-size: 1rem; margin: 0; }
+.award-issuer{ color: var(--primary-deeper); font-weight: 500; font-size: .9rem; margin: 2px 0 4px; }
+.award-date{ color: var(--ink-soft); font-size: .82rem; margin: 0 0 8px; }
+.award-desc{ color: var(--ink-soft); font-size: .92rem; margin: 0; max-width: 62ch; }
+
 .skills-panel{
   background: var(--bg-card); border:1px solid var(--line); border-radius: 20px;
   padding: 26px 28px; box-shadow: var(--shadow);
@@ -319,19 +338,19 @@ a:focus-visible, button:focus-visible{
 }
 .ti-head{ display:flex; align-items:center; gap: 12px; margin-bottom: 8px; }
 .ti-logo{
-  width: 200px; height: 200px; border-radius: 10px; flex: 0 0 auto; overflow: hidden;
+  width: 84px; height: 84px; border-radius: 12px; flex: 0 0 auto; overflow: hidden;
   background: var(--bg-card-alt); border: 1px solid var(--line);
   display:flex; align-items:center; justify-content:center; color: var(--primary-deeper);
 }
 .ti-logo.has-logo{ background: #fff; }
-.ti-logo img{ width: 100%; height: 100%; object-fit: contain; padding: 5px; }
+.ti-logo img{ width: 100%; height: 100%; object-fit: contain; padding: 8px; }
 .ti-logo svg{ width: 19px; height: 19px; }
 .ti-role{ font-weight: 600; font-size: 1.02rem; margin: 0; }
 .ti-org{ color: var(--primary-deeper); font-weight: 500; font-size: .9rem; margin: 2px 0 0; }
 .ti-period{ color: var(--ink-soft); font-size: .82rem; margin: 2px 0 0; }
 .ti-desc{ color: var(--ink-soft); font-size: .93rem; max-width: 62ch; margin:0; }
 
-.porto-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+.porto-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
 .porto-card{
   background: var(--bg-card); border: 1px solid var(--line); border-radius: 18px;
   overflow: hidden; display:flex; flex-direction:column;
@@ -339,7 +358,7 @@ a:focus-visible, button:focus-visible{
 }
 .porto-card:hover{ transform: translateY(-3px); box-shadow: var(--shadow); }
 .porto-media{
-  width: 100%; aspect-ratio: 16/10; background: linear-gradient(155deg, var(--primary) 0%, var(--primary-deep) 100%);
+  width: 100%; aspect-ratio: 4/3; background: linear-gradient(155deg, var(--primary) 0%, var(--primary-deep) 100%);
   border-bottom: 1px solid var(--line); overflow:hidden;
   display:flex; align-items:center; justify-content:center;
 }
@@ -348,10 +367,13 @@ a:focus-visible, button:focus-visible{
   font-family:'Newsreader', serif; font-style:italic; color: var(--white); font-size: 1.3rem; opacity:.85;
   padding: 0 16px; text-align:center;
 }
-.porto-body{ padding: 20px 22px 22px; display:flex; flex-direction:column; gap: 10px; flex-grow:1; }
+.porto-body{ padding: 18px 20px 20px; display:flex; flex-direction:column; gap: 8px; flex-grow:1; }
 .porto-tag{ font-size: .76rem; font-weight: 600; color: var(--primary-deeper); }
 .porto-title{ font-size: 1.05rem; font-weight: 600; margin: 0; }
-.porto-desc{ color: var(--ink-soft); font-size: .89rem; margin:0; flex-grow:1; }
+.porto-desc{
+  color: var(--ink-soft); font-size: .88rem; margin:0; flex-grow:1;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
 .porto-gh{
   display:inline-flex; align-items:center; gap:7px; text-decoration:none;
   font-size: .87rem; font-weight: 600; color: var(--ink); margin-top: 4px;
@@ -396,6 +418,7 @@ footer a:hover{ color: var(--primary-deeper); }
     <ul class="topnav" id="topNav">
       <li><a href="#about">About me</a></li>
       <li><a href="#edu">Education</a></li>
+      <li><a href="#awards">Awards</a></li>
       <li><a href="#/skills">Certificate &amp; Skill</a></li>
       <li><a href="#/experience">Experience</a></li>
       <li><a href="#/portofolio">Portofolio</a></li>
@@ -448,6 +471,11 @@ footer a:hover{ color: var(--primary-deeper); }
   <section class="block" id="edu">
     <h3 class="section-title">Education</h3>
     <div class="edu-list" id="eduList"></div>
+  </section>
+
+  <section class="block" id="awards">
+    <h3 class="section-title">Honors &amp; Awards</h3>
+    <div class="award-list" id="awardList"></div>
   </section>
 
   <section class="block skills-panel" id="skills">
@@ -590,6 +618,10 @@ const CONFIG = {
     { degree: "Undergraduate Data Science", school: "Bina Nusantara University", period: "Aug 2024 - Present", desc: "Focus on data analysis, machine learning, and deep learning", logo: "images/binus-university-logo.png" }
   ],
 
+  awards: [
+    { title: "Beasiswa Wibowo", issuer: "Bina Nusantara", date: "2025", logo: "images/binus-university-logo.png" }
+  ],
+
   orgLogos: {
     "Bina Nusantara": "images/binus-university-logo.png",
     "Data Science Club": "images/data-science-club.jpg",
@@ -635,22 +667,22 @@ const CONFIG = {
     {
     tag: "Amazon Web Application",
     title: "Credit Score Prediction",
-    desc: "Built and deployed a credit score prediction model (Logistic Regression, Random Forest, Decision Tree) via an interactive Streamlit app, with end-to-end MLOps pipeline deployment on AWS SageMaker and EC2.",
+    desc: "Credit score prediction app deployed end-to-end on AWS SageMaker and EC2.",
     githubUrl: "https://github.com/Beatrice-Nathania/Credit-Prediction-Amazon-Web",
     imageUrl: "images/amazon-endpoint.jpg"
     },
-    { tag: "Web App", title: "Student Salary and Placement Prediction Web Application", desc: "Built and deployed an interactive Streamlit web app with a full data pipeline for a 5,000-student dataset, using Random Forest and Logistic Regression models to predict salary and placement status alongside dynamic data visualizations.", githubUrl: "https://github.com/Beatrice-Nathania/Salary_and_Placement_Prediction_App", imageUrl: "images/application.jpg" },
+    { tag: "Web App", title: "Student Salary and Placement Prediction Web Application", desc: "Streamlit app predicting student salary and placement status, with interactive data visualizations.", githubUrl: "https://github.com/Beatrice-Nathania/Salary_and_Placement_Prediction_App", imageUrl: "images/application.jpg" },
     {
     tag: "Database SQL",
     title: "Tourism Database",
-    desc: "Designed and built a normalized tourism database using SQL, structuring raw tourism data into multiple relational tables with defined primary and foreign keys to ensure data integrity and support efficient querying.",
+    desc: "Normalized SQL database for tourism data, structured for data integrity and efficient querying.",
     githubUrl: "https://github.com/Beatrice-Nathania/tourism-database",
     imageUrl: "images/sql.png"
     },
     {
     tag: "Data Visualization",
     title: "Heart Disease Risk Factor Analysis",
-    desc: "Built an interactive Shiny web app in R to analyze heart disease risk factors, allowing users to filter the data and easily identify underlying patterns.",
+    desc: "Interactive Shiny app in R for exploring heart disease risk factors.",
     githubUrl: "https://github.com/Beatrice-Nathania/does-cholesterol-cause-heartdisease",
     imageUrl: "images/project-visualization.jpg"
     },
@@ -658,21 +690,21 @@ const CONFIG = {
     {
     tag: "Deep Learning",
     title: "Stock Prediction Using LSTM",
-    desc: "Developed an LSTM-based deep learning model to forecast AMZN and CSCO stock prices using 5,000+ data points, improving R² from -0.09 to 0.953 and reducing MAPE to 1.81% through iterative architecture tuning.",
+    desc: "LSTM model forecasting AMZN and CSCO stock prices, reaching a 0.953 R² after tuning.",
     githubUrl: "https://github.com/Beatrice-Nathania/LSTM-Stock-Prediction",
     imageUrl: "images/lstm-project.png"
     },
     {
     tag: "Machine Learning",
     title: "Mushroom Edibility Prediction",
-    desc: "Built and compared XGBoost and Logistic Regression models to classify mushroom edibility from a 60,000+ record UCI dataset, achieving 96.4% ROC-AUC and 92% recall on the poisonous class.",
+    desc: "XGBoost model classifying mushroom edibility, achieving 96.4% ROC-AUC.",
     githubUrl: "https://github.com/Beatrice-Nathania/Mushrooms-Edibility-Paper-Research",
     imageUrl: "images/mushroom-paper.jpg"
     },
     {
     tag: "System Recommendation",
     title: "Song Recommendation",
-    desc: "Built a hybrid content-based song recommendation system combining TF-IDF text similarity (genre, artist, track name) with audio feature similarity (danceability, energy, tempo) to suggest songs matching a user's text input.",
+    desc: "Hybrid content-based song recommender combining text and audio-feature similarity.",
     githubUrl: "https://github.com/Beatrice-Nathania/song-recommendation",
     imageUrl: "images/song-recommendation.jpg"
     }
@@ -748,6 +780,22 @@ CONFIG.education.forEach(x => {
       <p class="edu-school">${x.school}</p>
       <p class="edu-period">${x.period}</p>
       <p class="edu-desc">${x.desc}</p>
+    </div>
+  `));
+});
+
+const awardList = document.getElementById('awardList');
+const awardIconDefault = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 21h8M12 17v4M7 4h10v4a5 5 0 01-10 0V4z"/><path d="M7 5H4a1 1 0 00-1 1v1a4 4 0 004 4M17 5h3a1 1 0 011 1v1a4 4 0 01-4 4"/></svg>`;
+CONFIG.awards.forEach(x => {
+  const hasLogo = !!x.logo;
+  const iconInner = hasLogo ? `<img src="${x.logo}" alt="${x.issuer}">` : awardIconDefault;
+  awardList.appendChild(el('div', 'award-card', `
+    <div class="award-icon${hasLogo ? ' has-logo' : ''}">${iconInner}</div>
+    <div>
+      <p class="award-title">${x.title}</p>
+      <p class="award-issuer">${x.issuer}</p>
+      <p class="award-date">${x.date}</p>
+      <p class="award-desc">${x.desc}</p>
     </div>
   `));
 });
@@ -891,22 +939,21 @@ topNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
   navToggle.setAttribute('aria-expanded', false);
 }));
 
-// ---- dark / light mode toggle ----
 const root = document.documentElement;
 const themeToggle = document.getElementById('themeToggle');
 try{
   const savedTheme = localStorage.getItem('theme');
-  if(savedTheme === 'light' || savedTheme === 'dark'){
-    root.setAttribute('data-theme', savedTheme);
-  }
-}catch(e){ /* localStorage tidak tersedia, lanjut pakai tema sistem */ }
+  root.setAttribute('data-theme', (savedTheme === 'dark') ? 'dark' : 'light');
+}catch(e){
+  root.setAttribute('data-theme', 'light');
+}
 
 themeToggle.addEventListener('click', () => {
   const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
   const current = root.getAttribute('data-theme') || (systemPrefersDark ? 'dark' : 'light');
   const next = current === 'dark' ? 'light' : 'dark';
   root.setAttribute('data-theme', next);
-  try{ localStorage.setItem('theme', next); }catch(e){ /* abaikan kalau gagal disimpan */ }
+  try{ localStorage.setItem('theme', next); }catch(e){  }
 });
 </script>
 
