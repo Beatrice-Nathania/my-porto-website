@@ -485,13 +485,11 @@ footer a:hover{ color: var(--primary-deeper); }
     <div class="skillcard-grid" id="tools"></div>
 
     <h4 class="skills-subtitle">Library</h4>
+    <h4 class="skills-subtitle">Python Libraries</h4>
     <div class="skillcard-grid" id="library"></div>
 
-    <h4 class="skills-subtitle">Python Libraries</h4>
-    <div class="skills-chips" id="pythonLibs"></div>
-
     <h4 class="skills-subtitle">R Libraries</h4>
-    <div class="skills-chips" id="rLibs"></div>
+    <div class="skillcard-grid" id="rLibs"></div>
 
     <h4 class="skills-subtitle">Expertise</h4>
     <div class="skills-chips" id="softSkills"></div>
@@ -578,11 +576,8 @@ footer a:hover{ color: var(--primary-deeper); }
   <h4 class="skills-subtitle">Library</h4>
   <div class="skillcard-grid" id="libraryAll"></div>
 
-  <h4 class="skills-subtitle">Python Libraries</h4>
-  <div class="skills-chips" id="pythonLibsAll"></div>
-
   <h4 class="skills-subtitle">R Libraries</h4>
-  <div class="skills-chips" id="rLibsAll"></div>
+  <div class="skillcard-grid" id="rLibsAll"></div>
 
   <h4 class="skills-subtitle">Expertise</h4>
   <div class="skills-chips" id="softSkillsAll"></div>
@@ -675,10 +670,22 @@ const CONFIG = {
   libraries: [
     { name: "PySpark", image: "images/pyspark.png"},
     { name: "TensorFlow", image: "images/tensorflow.png"},
-    { name: "Scikit-Learn", image: "images/scikit learn.png"}
+    { name: "Scikit-Learn", image: "images/scikit learn.png"},
+    { name: "Matplotlib", image: "images/matplotlib.jpg"},
+    { name: "Pandas", image: "images/pandas.png"},
+    { name: "NumPy", image: "images/numpy.jpg"},
+    { name: "YOLO", image: "images/YOLO.jpg"},
+    { name: "ETL", image: "images/scikit learn.png"},
+    { name: "Seaborn", image: "images/seaborn.png"}
   ],
-  pythonLibraries: ["Matplotlib", "Pandas", "NumPy", "YOLO", "MLflow", "Optuna", "Apache Spark", "ETL", "Seaborn", "GridSearchCV", "XGBoost"],
-  rLibraries: ["dplyr", "ggplot2", "knitr", "Shiny", "tidyr", "plotly"],
+  rLibraries: [
+    { name: "dplyr", image: "images/Rlang.jpg" },
+    { name: "ggplot2", image: "images/Rlang.jpg" },
+    { name: "knitr", image: "images/Rlang.jpg" },
+    { name: "Shiny", image: "images/Rlang.jpg" },
+    { name: "tidyr", image: "images/Rlang.jpg" },
+    { name: "plotly", image: "images/Rlang.jpg" }
+  ],
   softSkills: ["Data Analysis", "Statistical Modeling", "Machine Learning", "Data Visualization", "Exploratory Data Analysis (EDA)", "Deep Learning", "Model Deployment"],
 
   certificates: [
@@ -852,22 +859,20 @@ function buildSkillCard(s){
   const icon = s.image ? `<img src="${s.image}" alt="${s.name}">` : (ICONS[s.icon] || ICONS.default);
   return el('div', 'skill-card', `<span class="skill-icon">${icon}</span><span class="skill-name">${s.name}</span>`);
 }
-function renderSkills(hardBoxId, softBoxId, libId, toolsId, pyLibId, rLibId){
+function renderSkills(hardBoxId, softBoxId, libId, toolsId, rLibId){
   const hardBox = document.getElementById(hardBoxId);
   CONFIG.hardSkills.forEach(s => hardBox.appendChild(buildSkillCard(s)));
   const lib = document.getElementById(libId);
   CONFIG.libraries.forEach(s => lib.appendChild(buildSkillCard(s)));
   const toolsBox = document.getElementById(toolsId);
   CONFIG.tools.forEach(s => toolsBox.appendChild(buildSkillCard(s)));
-  const pyLibBox = document.getElementById(pyLibId);
-  CONFIG.pythonLibraries.forEach(s => pyLibBox.appendChild(el('span', 'chip', s)));
   const rLibBox = document.getElementById(rLibId);
-  CONFIG.rLibraries.forEach(s => rLibBox.appendChild(el('span', 'chip', s)));
+  CONFIG.rLibraries.forEach(s => rLibBox.appendChild(buildSkillCard(s)));
   const softBox = document.getElementById(softBoxId);
   CONFIG.softSkills.forEach(s => softBox.appendChild(el('span', 'chip', s)));
 }
-renderSkills('hardSkills', 'softSkills', 'library', 'tools', 'pythonLibs', 'rLibs');
-renderSkills('hardSkillsAll', 'softSkillsAll', 'libraryAll', 'toolsAll', 'pythonLibsAll', 'rLibsAll');
+renderSkills('hardSkills', 'softSkills', 'library', 'tools', 'rLibs');
+renderSkills('hardSkillsAll', 'softSkillsAll', 'libraryAll', 'toolsAll', 'rLibsAll');
 
 function buildCertItem(c){
   const li = el('li', '', `
