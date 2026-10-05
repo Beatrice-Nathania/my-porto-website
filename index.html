@@ -255,7 +255,7 @@ a:focus-visible, button:focus-visible{
   display:grid; grid-template-columns: auto 1fr; gap: 16px; align-items:flex-start;
 }
 .award-icon{
-  width: 52px; height: 52px; border-radius: 12px; flex: 0 0 auto; overflow: hidden;
+  width: 125px; height: 125px; border-radius: 12px; flex: 0 0 auto; overflow: hidden;
   background: linear-gradient(155deg, var(--primary) 0%, var(--primary-deep) 100%);
   display:flex; align-items:center; justify-content:center; color: var(--white);
 }
@@ -284,7 +284,7 @@ a:focus-visible, button:focus-visible{
   background: var(--bg-card-alt); border: 1px solid var(--line);
 }
 .skill-card .skill-icon{
-  width: 30px; height: 30px; border-radius: 8px; overflow: hidden; flex: 0 0 auto;
+  width: 40px; height: 40px; border-radius: 8px; overflow: hidden; flex: 0 0 auto;
   display:flex; align-items:center; justify-content:center;
 }
 .skill-card .skill-icon svg{ width: 100%; height: 100%; }
@@ -338,7 +338,7 @@ a:focus-visible, button:focus-visible{
 }
 .ti-head{ display:flex; align-items:center; gap: 12px; margin-bottom: 8px; }
 .ti-logo{
-  width: 84px; height: 84px; border-radius: 12px; flex: 0 0 auto; overflow: hidden;
+  width: 200px; height: 200px; border-radius: 12px; flex: 0 0 auto; overflow: hidden;
   background: var(--bg-card-alt); border: 1px solid var(--line);
   display:flex; align-items:center; justify-content:center; color: var(--primary-deeper);
 }
@@ -370,10 +370,7 @@ a:focus-visible, button:focus-visible{
 .porto-body{ padding: 18px 20px 20px; display:flex; flex-direction:column; gap: 8px; flex-grow:1; }
 .porto-tag{ font-size: .76rem; font-weight: 600; color: var(--primary-deeper); }
 .porto-title{ font-size: 1.05rem; font-weight: 600; margin: 0; }
-.porto-desc{
-  color: var(--ink-soft); font-size: .88rem; margin:0; flex-grow:1;
-  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
-}
+.porto-desc{ color: var(--ink-soft); font-size: .88rem; margin:0; flex-grow:1; }
 .porto-gh{
   display:inline-flex; align-items:center; gap:7px; text-decoration:none;
   font-size: .87rem; font-weight: 600; color: var(--ink); margin-top: 4px;
@@ -708,22 +705,22 @@ const CONFIG = {
     {
     tag: "Amazon Web Application",
     title: "Credit Score Prediction",
-    desc: "Credit score prediction app deployed end-to-end on AWS SageMaker and EC2.",
+    desc: "Credit score prediction model (Logistic Regression, Random Forest, Decision Tree) deployed via Streamlit with a full MLOps pipeline on AWS SageMaker &amp; EC2.",
     githubUrl: "https://github.com/Beatrice-Nathania/Credit-Prediction-Amazon-Web",
     imageUrl: "images/amazon-endpoint.jpg"
     },
-    { tag: "Web App", title: "Student Salary and Placement Prediction Web Application", desc: "Streamlit app predicting student salary and placement status, with interactive data visualizations.", githubUrl: "https://github.com/Beatrice-Nathania/Salary_and_Placement_Prediction_App", imageUrl: "images/application.jpg" },
+    { tag: "Web App", title: "Student Salary and Placement Prediction Web Application", desc: "Streamlit app predicting student salary &amp; placement status using Random Forest and Logistic Regression, with interactive visualizations.", githubUrl: "https://github.com/Beatrice-Nathania/Salary_and_Placement_Prediction_App", imageUrl: "images/application.jpg" },
     {
     tag: "Database SQL",
     title: "Tourism Database",
-    desc: "Normalized SQL database for tourism data, structured for data integrity and efficient querying.",
+    desc: "Normalized SQL tourism database with relational tables and defined keys, ensuring data integrity and efficient querying.",
     githubUrl: "https://github.com/Beatrice-Nathania/tourism-database",
     imageUrl: "images/sql.png"
     },
     {
     tag: "Data Visualization",
     title: "Heart Disease Risk Factor Analysis",
-    desc: "Interactive Shiny app in R for exploring heart disease risk factors.",
+    desc: "Interactive Shiny app in R for analyzing heart disease risk factors, letting users filter data to spot patterns.",
     githubUrl: "https://github.com/Beatrice-Nathania/does-cholesterol-cause-heartdisease",
     imageUrl: "images/project-visualization.jpg"
     },
@@ -731,21 +728,21 @@ const CONFIG = {
     {
     tag: "Deep Learning",
     title: "Stock Prediction Using LSTM",
-    desc: "LSTM model forecasting AMZN and CSCO stock prices, reaching a 0.953 R² after tuning.",
+    desc: "LSTM model forecasting AMZN &amp; CSCO stock prices, improving R² to 0.953 and MAPE to 1.81% through tuning.",
     githubUrl: "https://github.com/Beatrice-Nathania/LSTM-Stock-Prediction",
     imageUrl: "images/lstm-project.png"
     },
     {
     tag: "Machine Learning",
     title: "Mushroom Edibility Prediction",
-    desc: "XGBoost model classifying mushroom edibility, achieving 96.4% ROC-AUC.",
+    desc: "XGBoost model classifying mushroom edibility from 60,000+ records, achieving 96.4% ROC-AUC and 92% recall on the poisonous class.",
     githubUrl: "https://github.com/Beatrice-Nathania/Mushrooms-Edibility-Paper-Research",
     imageUrl: "images/mushroom-paper.jpg"
     },
     {
     tag: "System Recommendation",
     title: "Song Recommendation",
-    desc: "Hybrid content-based song recommender combining text and audio-feature similarity.",
+    desc: "Hybrid song recommender combining TF-IDF text similarity with audio features (danceability, energy, tempo) to match user input.",
     githubUrl: "https://github.com/Beatrice-Nathania/song-recommendation",
     imageUrl: "images/song-recommendation.jpg"
     }
@@ -1014,7 +1011,7 @@ themeToggle.addEventListener('click', () => {
   const current = root.getAttribute('data-theme') || (systemPrefersDark ? 'dark' : 'light');
   const next = current === 'dark' ? 'light' : 'dark';
   root.setAttribute('data-theme', next);
-  try{ localStorage.setItem('theme', next); }catch(e){  }
+  try{ localStorage.setItem('theme', next); }catch(e){}
 });
 </script>
 
